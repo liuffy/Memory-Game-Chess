@@ -1,19 +1,34 @@
 require_relative "piece"
+require_relative "nullpiece"
+
 class Board
   attr_reader :grid
 
+ #
   def initialize
     @grid = Array.new(8) { Array.new(8) }
     setup_board
   end
 
   def setup_board
-      @grid.map! do |row|
-        row.map! do |square|
-        Piece.new
-      end
-    end
+
+  Positions = {
+    king: [[0,3]]
+    knight: [[0,1],[0,6]]
+    queen: [[0,4]]
+    bishop: [[0,2],[0,5]]
+    rook: [[0,0],[0,7]]
+  }
+
+  #pawn: [[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[1,7]
+  
+  # hard code 1 set
+  # loop through twice, different x coordinate, switching color
+    @grid.map! do |row|
+    row.map! do |square|
+    NullPiece.new if square.empty?
   end
+end
 
   def [](pos)
     row, col = pos
@@ -45,7 +60,7 @@ class Board
 
   def in_bounds?(pos)
     return true if pos[0].between?(0,7) && pos[1].between?(0,7)
-    false 
+    false
   end
 
 end

@@ -16,7 +16,7 @@ class Display
       # debugger
     @board.grid.each.with_index do |row, x|
       row.each.with_index do |square, y|
-        [x,y] == @cursor.cursor_pos ? (print square.name.colorize(:red)) : (print square.name.colorize(:cyan))
+        [x,y] == @cursor.cursor_pos ? (print square.to_s.colorize(:red)) : (print square.to_s.colorize(:cyan))
       end.join("")
       puts ""
     end.join("\n")

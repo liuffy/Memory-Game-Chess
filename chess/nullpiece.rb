@@ -7,4 +7,8 @@ class NullPiece
   # Different instances would take up a lot of memory (a new instance of NullPiece on every square).
   # Including a singleton is a clear indication to anyone reading your
   # code that there should only ever be one instance of the class you're writing.
+  include Singleton
+
+  def initialize
+  end
 end
