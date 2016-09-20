@@ -1,2 +1,3 @@
 class Cursorable
-end 
+  
+end

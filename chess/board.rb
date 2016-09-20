@@ -1,14 +1,15 @@
 require_relative "piece"
-require 'byebug'
 class Board
+  attr_reader :grid
+
   def initialize
     @grid = Array.new(8) { Array.new(8) }
     setup_board
   end
 
   def setup_board
-      @grid.each do |row|
-        row.map do |square|
+      @grid.map! do |row|
+        row.map! do |square|
         Piece.new
       end
     end
@@ -43,8 +44,8 @@ class Board
   end
 
   def in_bounds?(pos)
-    byebug
-    !self[pos].nil?
+    return true if pos[0].between?(0,7) && pos[1].between?(0,7)
+    false 
   end
 
 end
