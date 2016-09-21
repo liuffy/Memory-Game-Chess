@@ -13,9 +13,8 @@ class Piece
      @board = board
    end
 
-
    def to_s
-
+      @piece.symbol
    end
 
    def symbol
@@ -97,5 +96,8 @@ class SlidingPiece < Piece
 end
 
 class SteppingPiece < Piece
+  def moves
+    
+  end
 
 end

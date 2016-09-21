@@ -1,6 +1,7 @@
 require 'colorize'
 require_relative 'cursor'
 require_relative 'board'
+require_relative 'piece'
 # require 'byebug'
 class Display
 
@@ -16,7 +17,7 @@ class Display
       # debugger
     @board.grid.each.with_index do |row, x|
       row.each.with_index do |square, y|
-        [x,y] == @cursor.cursor_pos ? @piece.symbol.colorize(:red)) : (print square.to_s.colorize(:cyan))
+        [x,y] == @cursor.cursor_pos ? .colorize(:red) : .to_s.colorize(:cyan)
       end.join("")
       puts ""
     end.join("\n")

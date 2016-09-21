@@ -11,7 +11,17 @@ class NullPiece
   # code that there should only ever be one instance of the class you're writing.
   include Singleton
 
-  def initialize
+  def moves
+    []
+  end
+
+  def to_s
+  end
+
+  def color
+  end
+
+  def empty?
   end
 
 end

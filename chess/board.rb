@@ -12,6 +12,7 @@ class Board
 
   def setup_board
 
+
   # # PIECES = {
   #    "king" => [[0,3]],
   #    "knight" => [[0,1],[0,6]],
@@ -32,12 +33,12 @@ class Board
      end
   #  Obj.const_get
 
-  # hard code 1 set
-  # loop through twice, different x coordinate, switching color
-  #   @grid.map! do |row|
-  #   row.map! do |square|
-
-  #   end
+  # # hard code 1 set
+  # # loop through twice, different x coordinate, switching color
+  # #   @grid.map! do |row|
+  # #   row.map! do |square|
+  #
+  # #   end
   # end
 end
 
