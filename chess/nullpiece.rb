@@ -1,3 +1,5 @@
+require 'singleton'
+
 class NullPiece
   # What does the singleton class in NullPiece do and why do we have it?
   # Singleton means that every instance of NullPiece is the same instance.
@@ -11,4 +13,5 @@ class NullPiece
 
   def initialize
   end
+
 end

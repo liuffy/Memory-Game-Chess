@@ -1,3 +1,5 @@
+require 'piece'
+
 class Bishop < SlidingPiece
 
     def symbol

@@ -1,4 +1,6 @@
-class Rook < SlidingPiece
+require 'piece'
+
+lass Rook < SlidingPiece
 
 
   def symbol

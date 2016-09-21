@@ -1,6 +1,10 @@
+require_relative 'piece'
+
+
 class Queen < SlidingPiece
 
-
+  attr_reader :symbol
+  
   def symbol
     @color == :white ? ♕ : ♛
   end
@@ -15,5 +19,5 @@ class Queen < SlidingPiece
 end
 
 
-# hard code 1 set 
+# hard code 1 set
 # loop through twice, different x coordinate, switching color
